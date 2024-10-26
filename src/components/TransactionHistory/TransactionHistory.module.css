@@ -1,4 +1,4 @@
-table {
+.tab {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
@@ -6,24 +6,24 @@ table {
   text-align: center;
 }
 
-th,
-td {
+.th,
+.td {
   padding: 12px;
   border: 1px solid #ddd;
 }
 
 /* Заголовки таблиці */
-thead th {
+thead .th {
   background-color: #333;
   color: white;
   font-weight: bold;
 }
 
 /* Чергування кольорів для рядків */
-tbody tr:nth-child(even) {
+tbody .td:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-tbody tr:nth-child(odd) {
+tbody .td:nth-child(odd) {
   background-color: #e0e0e0;
 }

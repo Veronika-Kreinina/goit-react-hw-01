@@ -1,22 +1,23 @@
-import './TransactionHistory.module.css';
+import s from './TransactionHistory.module.css';
+const tableHeaders = ['Type', 'Amount', 'Currency'];
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table>
+    <table className={s.tab}>
       <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
+        {tableHeaders.map((item, index) => (
+          <th className={s.th} key={index}>
+            {item}
+          </th>
+        ))}
       </thead>
 
       <tbody>
         {items.map(transaction => (
           <tr key={transaction.id}>
-            <td>{transaction.type}</td>
-            <td>{transaction.amount}</td>
-            <td>{transaction.currency}</td>
+            <td className={s.td}>{transaction.type}</td>
+            <td className={s.td}>{transaction.amount}</td>
+            <td className={s.td}>{transaction.currency}</td>
           </tr>
         ))}
       </tbody>
